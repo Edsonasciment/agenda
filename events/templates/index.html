@@ -15,11 +15,11 @@
                         <h6 class="py-2">Novo Evento</h6>
                     </div>
                     <div class="col-4 col-md-2">
-                        <a href="#"><img src="{% static 'today.png' %}" class="img-fluid"/></a><br/>
+                        <a href="{% url 'agenda-events-day' today.year today.month today.day %}"><img src="{% static 'today.png' %}" class="img-fluid"/></a><br/>
                         <h6 class="py-2">Eventos de Hoje</h6>
                     </div>
                     <div class="col-4 col-md-2">
-                        <a href="#"><img src="{% static 'all.png' %}" class="img-fluid"/></a><br/>
+                        <a href="{% url 'agenda-events-all' %}"><img src="{% static 'all.png' %}" class="img-fluid"/></a><br/>
                         <h6 class="py-2">Todos os Eventos</h6>
                     </div>
                 </div>

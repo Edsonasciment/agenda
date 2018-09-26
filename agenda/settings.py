@@ -47,7 +47,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'Agenda.urls'
+ROOT_URLCONF = 'agenda.urls'
 
 TEMPLATES = [
     {
@@ -65,7 +65,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Agenda.wsgi.application'
+WSGI_APPLICATION = 'agenda.wsgi.application'
 
 
 # Database
