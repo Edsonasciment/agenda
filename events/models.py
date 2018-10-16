@@ -47,3 +47,42 @@ class Comment(models.Model):
 
     def __str__(self):
         return "{} commentou em {:%c}".format(self.author, self.commented)
+
+
+
+class Cadastro(models.Model):
+
+
+    etinia_list = (
+        ('0', 'Branco'),
+        ('1', 'preto'),
+        ('2', 'Não identificado'),
+
+    )
+
+    pais_list = (
+        ('0', 'Brasil'),
+        ('1', 'Argentina'),
+        ('2', 'Paraguai'),
+
+    )
+
+
+    nome = models.CharField(max_length=80)
+    idade = models.CharField(max_length=80)
+    cor = models.CharField(max_length=80)
+    sexo = models.CharField(max_length=80)
+    cidade = models.CharField(max_length=80)
+    Nacionalidade = models.CharField(max_length=1, choices=pais_list)
+    etinia = models.CharField(max_length=1, choices=etinia_list)
+
+    def __str__(self):
+        return self.nome
+
+
+
+
+
+
+
+

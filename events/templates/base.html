@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html lang="pt-BR">
+{% include "header.html" %}
+    <body>
+{% include "navbar.html" %}
+        <div class="jumbotron rounded-0 text-center div-background">
+            <h1><a href="{%url 'cad_list'%}" class="top-menu">CASDASTROS</a></h1>
+            <h2><a href="{%url 'cad_new'%}" class="top-menu">Cadastrar</a></h2>
+        </div>
+
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+        {% include "footer.html" %}
+    </body>
+</html>
